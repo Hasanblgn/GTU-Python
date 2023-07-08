@@ -2,7 +2,9 @@ def factorial(num):
 
     if num < 0:
         raise ValueError("please enter pozitive value")
-    if num == 1:
+    elif num == 1 :
+        return 1
+    elif num == 0:
         return 1
     return num * factorial(num-1)
 
