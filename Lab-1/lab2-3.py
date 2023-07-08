@@ -1,14 +1,16 @@
-#%%
-# Slicing name variables
+# lab2 4. Problem
 
-name = str(input("Name: "))
-idx1 = int(input("First Index: "))
-idx2 = int(input("Second Index: "))
-# -> It getten mod due to get rid of negatif value 
-idx1 = idx1 % len(name)
-idx2 = idx2 % len(name)
+inp1 = str(input("Please enter: "))
 
-indexMin = min(idx1, idx2)
-indexMax = max(idx1, idx2)
+vowels = {"a","e","i","o","u","A","E","I","O","U"}
 
-print(name[indexMin:indexMax+1])
+if len(inp1) > 100 or len(inp1) < 0:
+    raise ValueError("Please enter value between size [0,100] ")
+
+
+piece = 0
+for col in vowels:
+    if col in inp1:
+        piece += 1
+
+print(f"your input has piece of vowels letter: {piece}")
