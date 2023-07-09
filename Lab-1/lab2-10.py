@@ -1,10 +1,16 @@
+def squareRoot(number):
+    x = number
+    y = 1
+    e = 0.000001 # -> Accuracy level
+    y = float(y)
+    x = float(x)
+    while x - y > e :
 
-def squareRoots(number):
-    for a in range(2,number//2,0.1):
-        if number / 2*a**2 == 0:
-            return a
+        x = (x+y)/2
+        y = number / x
+
+    return x
 
 
-number = squareRoots(float(input("Enter a Value: ")))
-print(number)
 
+print(squareRoot(int(input(":"))))
